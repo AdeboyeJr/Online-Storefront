@@ -43,7 +43,7 @@ if (mysqli_num_rows($get_cats_res) < 1) {
                 <div>
                 <h2 class="title">$item_title</h2>
                 <p>
-                <img src="images/$item_img" alt="$item_title" width="500" height="500" style=" float: left; margin-right: 0.5rem;">
+                <img src="images/$item_img" alt="$item_title" style=" float: left; margin-right: 0.5rem; width: 5em; height: 5em;">
                 $item_desc
                 </p>
                 <p>Price: \$$item_price</p>
