@@ -2,8 +2,10 @@
 // connect to database
 $mysqli = mysqli_connect("localhost", "u667897109_Ade", "T#st1125", "u667897109_Data");
 
-$display_block = "<h1>My Categories</h1>
-<p>Scroll through the items in each category.</p>";
+$display_block = "<h1 id=\"banner\">My Categories</h1>
+<h2 id=\"banner\">Scroll through the items in each category.</h2><main id=\"content\">";
+
+
 
 // show categories first
 $get_cats_sql = "SELECT id, cat_title, cat_desc FROM store_categories ORDER BY cat_title";
@@ -20,7 +22,7 @@ if (mysqli_num_rows($get_cats_res) < 1) {
         $cat_desc = stripslashes($cats['cat_desc']);
 
       
-        $display_block .= "<h2>".$cat_title."</h2>\n<p>".$cat_desc."</p>";
+        $display_block .= "<h2 class=\"cat-title\">".$cat_title."</h2>\n<p class=\"cat-desc\">".$cat_desc."</p>";
 
         // get items
         $get_items_sql = "SELECT id, item_title, item_price, item_desc, item_image FROM store_items WHERE cat_id = '".$cat_id."' ORDER BY item_title";
@@ -43,18 +45,20 @@ if (mysqli_num_rows($get_cats_res) < 1) {
                 <div>
                 <h2 class="title">$item_title</h2>
                 <p>
-                <img src="images/$item_img" alt="$item_title" style=" float: left; margin-right: 0.5rem; width: 5em; height: 5em;">
+                <img src="images/$item_img" alt="$item_title">
                 $item_desc
                 </p>
                 <p>Price: \$$item_price</p>
-                <p><a href="seestore.php?cat_id=$cat_id"><button id="">Buy Now</button></a></p>
+                <p><a href="seestore.php?cat_id=$cat_id"><button id="buy-now">Buy Now</button></a></p>
                 </div>
                 END_OF_TEXT;
             }
 
+
             $display_block .= <<<END_OF_TEXT
 
             </section>
+            </main>
             <script type="text/javascript">
             $(function() {
                 $('#main-slider-$cat_id').liquidSlider({
@@ -66,6 +70,8 @@ if (mysqli_num_rows($get_cats_res) < 1) {
             </script>
             END_OF_TEXT;
         }
+
+    
         // free results
         mysqli_free_result($get_items_res);
     
@@ -85,13 +91,19 @@ mysqli_close($mysqli);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Categories</title>
+    <link rel="icon" href="images/devtools.png" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/liquidslider/css/liquid-slider.css">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/reset.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="node_modules/liquidslider/js/jquery.liquid-slider.min.js"></script>
 </head>
 <body>
+    
     <?php echo $display_block; ?>
+
+    <a href="/"><button id="home">Home</button></a>
 </body>
 </html>

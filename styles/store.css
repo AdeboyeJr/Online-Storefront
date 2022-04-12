@@ -1,0 +1,193 @@
+html {
+    background: rgba(65, 188, 147, 0.878);
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background: rgb(255, 255, 255);
+
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+    padding: 4em;
+    
+}
+
+#myTable, #posts {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#banner {
+    text-align: center;
+    font-size: 3em;
+    
+    color: white;
+    background-color: rgb(127, 255, 212);
+    padding: 20px;
+    margin-bottom: 1em;
+}
+
+h2#banner {
+    margin-top: -2em;
+    margin-bottom: 1em;
+    padding: 1em;
+    color: rgb(123, 163, 150);
+    background: rgba(127, 255, 212, 0.25);
+    text-align: center;
+    font-size: 2em;
+}
+
+h2.cat-title {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: rgb(123, 163, 150);
+    font-size: 1.5em;
+}
+
+p.cat-desc {
+    color: rgba(4, 107, 73, 1);
+    background: rgba(57, 206, 157, 0.543);
+    margin: 0 20em 1em 20em;
+    padding: 2em;
+    text-align: center;
+    font-size: 1em;
+}
+
+a {
+    color: rgb(123, 163, 150);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(4, 107, 73, 1);
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(127, 212, 184);
+    text-decoration: none;
+}
+
+#content {
+    margin: 0 auto;
+}
+
+/* #content a{
+   text-align: center;
+
+} */
+
+#mytable th:nth-child(1) {
+    border-right: 1px solid rgba(4, 107, 73, 1);
+}
+
+th {
+    border: 1px solid rgba(127, 255, 212, 0.25);
+    font-weight: bold;
+    padding: 2em;
+    text-align: center;
+    color: rgb(123, 163, 150);
+    background: rgba(127, 255, 212, 0.25);
+}
+
+th a {
+    text-decoration: none;
+}
+
+th a:hover {
+    color: rgba(4, 107, 73, 1);
+    text-decoration: none;
+}
+
+th a:active {
+    color: rgb(127, 212, 184);
+    text-decoration: none;
+}
+
+td {
+    border: 1px solid rgb(127, 255, 212);
+    padding: 6px;
+}
+
+.num_posts_col {text-align: center;}
+
+#nav {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+#nav-left {
+    margin-left: 2em;
+    margin-top: 3em;
+}
+
+#home, #buy-now {
+    font-size: 1em;
+    border: 1px solid rgba(127, 255, 212, 0.25);
+    background: rgba(127, 255, 212, 0.25);
+    color:rgb(123, 163, 150);
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 .5em rgba(4, 107, 73, 1);
+}
+
+#home:hover, #buy-now:hover {
+    color: rgba(4, 107, 73, 1);
+    background: rgba(57, 206, 157, 0.543);
+    box-shadow: 0 .5em rgb(3, 77, 52);
+}
+
+#home:active, #buy-now:active {
+    box-shadow: 0 .2em rgb(3, 56, 39);
+    transform: translateY(4px);
+}
+
+div[class^="main-slider"] {
+    
+    background: rgb(227, 244, 239);
+}
+
+
+
+
+form {
+    margin-left: 2em;
+}
+
+form p {
+    color: rgb(123, 163, 150);
+    margin-top: 1.5em;
+}
+
+form textarea {
+    width: 70%;
+}
+
+form input {
+    width: 40%;
+}
+
+h2 strong {
+    color:rgb(3, 56, 39);
+    font-weight: bold;
+}
+
+h1 strong {
+    color:rgb(87, 170, 143);
+    font-weight: bold;
+}
+
+img {
+    float: left; 
+    margin: 10em;
+    width: 12em; 
+    height: 12em;
+}
