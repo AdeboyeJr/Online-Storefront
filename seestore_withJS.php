@@ -93,8 +93,8 @@ mysqli_close($mysqli);
     <title>My Categories</title>
     <link rel="icon" href="images/devtools.png" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/liquidslider/css/liquid-slider.css">
-    <link rel="stylesheet" href="styles/store.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/store.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
