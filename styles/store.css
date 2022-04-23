@@ -40,6 +40,7 @@ h2#banner {
     background: rgba(127, 255, 212, 0.25);
     text-align: center;
     font-size: 2em;
+    z-index: 0;
 }
 
 h2.cat-title {
@@ -47,15 +48,21 @@ h2.cat-title {
     margin-bottom: 1em;
     color: rgb(123, 163, 150);
     font-size: 1.5em;
+    text-align: center;
 }
 
 p.cat-desc {
     color: rgba(4, 107, 73, 1);
     background: rgba(57, 206, 157, 0.543);
-    margin: 0 20em 1em 20em;
+    width: 500px;
+    margin: 0 auto 30px auto;
     padding: 2em;
     text-align: center;
     font-size: 1em;
+}
+
+.home-button {
+    text-align: center;
 }
 
 a {
@@ -127,6 +134,12 @@ td {
     margin-top: 3em;
 }
 
+.center, .liquid-slider {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 #home, #buy-now {
     font-size: 1em;
     border: 1px solid rgba(127, 255, 212, 0.25);
@@ -152,9 +165,19 @@ td {
 
 div[class^="main-slider"] {
     
-    background: rgb(227, 244, 239);
+    background: rgb(188, 226, 214);
 }
 
+.panel-container {
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 20pt;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color:rgb(123, 163, 150);
+}
 
 
 
@@ -186,8 +209,78 @@ h1 strong {
 }
 
 img {
-    float: left; 
-    margin: 10em;
-    width: 20em; 
-    height: 20em;
+    float: center; 
+    margin: 4rem;
+    width: 80%; 
+    height: 15rem;
+}
+
+#Capa_1 {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    z-index: 1;
+
+}
+
+.cart, .wheels {
+    width: 10px;
+    height: 10px;
+    fill: rgb(123, 163, 150);
+  
+}
+
+.wheels {
+    fill:rgb(3, 56, 39);
+}
+
+#Capa_1:hover {
+    filter: brightness(.50);
+}
+
+@media only screen and (max-device-width: 840px) {
+    p.cat-desc {
+        width: 4rem;
+        text-align: center;
+    }
+
+    #Capa_1 {
+        position: static;
+        margin-right: 30px;
+    }
+
+    .shop-icon {
+        text-align: right;
+    }
+
+    p.cat-desc {
+        margin: 0 auto 30px auto;
+        width: 300px;
+        padding: 50px;
+        text-align: center;
+    }
+
+
+}
+
+@media only screen and (max-device-width: 595px) {
+
+    #Capa_1 {
+       margin: 0 auto;
+    
+    }
+
+    .shop-icon {
+        text-align: center;
+        
+    }
+
+
+    p.cat-desc {
+        margin: 0 auto 30px auto;
+        width: 100px;
+        padding: 50px;
+        text-align: center;
+    }
+
 }
