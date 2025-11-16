@@ -1,6 +1,6 @@
 <?php
 // connect to database
-$mysqli = mysqli_connect("localhost", "u667897109_Ade", "T#st1125", "u667897109_Data");
+$mysqli = mysqli_connect("localhost", "uu667897109_adejr", "D#vstack11", "u667897109_web_collection");
 
 $display_block = "<h1 id=\"banner\">My Categories</h1>
 <h2 id=\"banner\">Scroll through the items in each category.</h2><main id=\"content\">";
